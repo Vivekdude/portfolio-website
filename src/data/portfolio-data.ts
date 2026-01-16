@@ -1,32 +1,33 @@
 // ============================================
-// CUSTOMIZE THIS FILE WITH YOUR INFORMATION
+// VIVEK SHUKLA - PORTFOLIO DATA
 // ============================================
 
 export const personalInfo = {
   name: "Vivek Shukla",
-  title: "Senior Full-Stack & Cloud Engineer",
+  title: "Senior Consultant | Full-Stack & Cloud Engineer",
   tagline:
-    "Building enterprise-grade cloud solutions that scale",
+    "Crafting Scalable Cloud Solutions & Enterprise Applications",
   subtitle:
-    "Transforming complex business challenges into elegant, high-performance applications",
-  email: "meetvivekshukla@gmail.com",
-  linkedin: "https://linkedin.com/in/vivekshukl",
-  github: "https://github.com/Vivekdude",
-  location: "India",
+    "9+ years building robust web applications with .NET, Azure, React & Angular",
+  email: "vivek1993.cs@gmail.com",
+  linkedin: "https://in.linkedin.com/in/vivekshukl",
+  github: "https://github.com/vivekdude",
+  phone: "+91-8318892165",
+  location: "Gurgaon, India",
   availableForWork: true,
 };
 
 export const aboutMe = {
   paragraphs: [
-    "I'm a Senior Full-Stack Engineer who thrives on building systems that matter. With over a decade of experience, I've architected and delivered enterprise platforms that serve thousands of users and process millions of transactions.",
-    "My expertise lies at the intersection of robust backend systems (.NET, Azure) and modern frontends (React, TypeScript). I don't just write code — I design solutions that are maintainable, scalable, and built to last.",
-    "From modernizing legacy monoliths to architecting cloud-native microservices, I bring a strategic mindset to every project. I believe in clean code, clear communication, and delivering real business value.",
+    "I'm a passionate Senior Consultant at Deloitte with 9+ years of experience designing and developing robust web applications and cloud-based solutions. I specialize in .NET, Microsoft Azure, React.js, and Angular, building scalable microservices using modern development practices.",
+    "Throughout my career, I've led development teams, architected cloud-native solutions on Azure, and delivered enterprise applications that drive real business value. From Azure Functions and Logic Apps to React dashboards and RESTful APIs — I bring full-stack expertise to every project.",
+    "I thrive in Agile environments, collaborating closely with clients to translate complex requirements into elegant technical solutions. My focus is always on writing clean, maintainable code while fostering a culture of innovation and continuous learning.",
   ],
   highlights: [
-    "Led teams of 5+ developers on enterprise projects",
-    "Architected systems handling 10K+ concurrent users",
-    "Achieved 99.9% uptime on critical applications",
-    "Delivered 50+ projects across 4 continents",
+    "Senior Consultant at Deloitte USI",
+    "Led development teams on enterprise projects",
+    "Azure Certified (AZ-900, AI-900, DP-900)",
+    "Expert in CI/CD & Agile methodologies",
   ],
 };
 
@@ -34,117 +35,117 @@ export const skills = {
   backend: {
     title: "Backend & Cloud",
     items: [
-      "C#, .NET Core 8, ASP.NET Web API",
-      "Azure Functions, APIM, Service Bus",
-      "SQL Server, Cosmos DB, PostgreSQL",
-      "Clean Architecture, DDD, CQRS",
-      "REST APIs, gRPC, GraphQL",
+      ".NET 8, .NET Core, ASP.NET Web API",
+      "Azure Functions, Logic Apps, APIM",
+      "Microservices, Event-Driven Architecture",
+      "Azure Service Bus, Cosmos DB, Key Vault",
+      "Entity Framework Core, LINQ, Node.js",
     ],
   },
   frontend: {
     title: "Frontend & UI",
     items: [
-      "React 18, Next.js 14, TypeScript",
-      "Tailwind CSS, Styled Components",
-      "Redux Toolkit, Zustand, React Query",
-      "Responsive Design, Web Accessibility",
-      "Testing: Jest, React Testing Library",
+      "React 18, Redux Toolkit, React Query",
+      "Angular 14+, RxJS, NgRx",
+      "TypeScript, JavaScript (ES6+)",
+      "Tailwind CSS, Material UI, Chart.js",
+      "Responsive Design, PWA, Web Accessibility",
     ],
   },
   devops: {
-    title: "DevOps & Platform",
+    title: "DevOps & Database",
     items: [
-      "Azure DevOps, GitHub Actions",
-      "Docker, Kubernetes, Terraform",
-      "OAuth2, JWT, Azure AD B2C",
-      "Application Insights, ELK Stack",
-      "CI/CD Pipelines, Infrastructure as Code",
+      "Azure DevOps, CI/CD Pipelines, YAML",
+      "SQL Server, Cosmos DB, Redis Cache",
+      "Docker, Kubernetes, Container Apps",
+      "OAuth 2.0, Azure AD B2C, JWT",
+      "Application Insights, Log Analytics",
     ],
   },
 };
 
 export const projects = [
   {
-    id: "enterprise-platform",
-    title: "Enterprise Management Platform",
+    id: "enterprise-cloud-platform",
+    title: "Enterprise Cloud Migration Platform",
     category: "Enterprise Application",
     shortDescription:
-      "A comprehensive enterprise platform serving 10,000+ users with complex workflows, role-based access, and real-time analytics.",
+      "Led the architecture and development of a large-scale cloud migration platform serving 50,000+ users across multiple regions with 99.9% uptime.",
     problem:
-      "A rapidly growing organization was struggling with a legacy system that couldn't scale. Manual processes caused delays, data inconsistencies, and frustrated stakeholders.",
+      "A Fortune 500 client needed to modernize their legacy on-premise systems to Azure cloud while ensuring zero downtime and maintaining strict compliance requirements across global operations.",
     solution:
-      "Architected a cloud-native platform from the ground up with event-driven architecture, automated workflows, and comprehensive reporting. Implemented Clean Architecture for long-term maintainability.",
+      "Architected a microservices-based platform using .NET Core and Azure Functions with event-driven architecture. Implemented Azure Service Bus for async messaging, Cosmos DB for global distribution, and Azure AD B2C for enterprise SSO.",
     techStack: [
-      "ASP.NET Core",
+      ".NET Core 8",
       "Azure Functions",
-      "SQL Server",
-      "React",
+      "Cosmos DB",
+      "Azure Service Bus",
       "Azure AD B2C",
       "Application Insights",
     ],
     highlights: [
-      "99.9% uptime with Azure infrastructure",
-      "70% reduction in manual processing time",
-      "10,000+ concurrent users supported",
-      "Sub-200ms API response times",
+      "99.9% uptime with auto-scaling",
+      "50,000+ active users globally",
+      "60% reduction in infrastructure costs",
+      "Sub-100ms API response times",
     ],
-    role: "Lead Developer & Architect",
+    role: "Lead Architect & Developer",
     image: "",
     liveUrl: "",
     githubUrl: "",
   },
   {
-    id: "saas-dashboard",
-    title: "SaaS Analytics Dashboard",
+    id: "realtime-analytics-dashboard",
+    title: "Real-Time Analytics Dashboard",
     category: "SaaS Product",
     shortDescription:
-      "A multi-tenant analytics platform with real-time data visualization, custom reports, and integrated billing.",
+      "Built a high-performance analytics platform processing 1M+ events daily with real-time visualizations and AI-powered insights.",
     problem:
-      "SMBs needed powerful analytics but found existing solutions either prohibitively expensive or overwhelmingly complex for their teams.",
+      "Business teams needed real-time visibility into operational metrics but existing tools couldn't handle the data volume or provide actionable insights quickly enough for decision-making.",
     solution:
-      "Built an intuitive SaaS platform with drag-and-drop dashboards, automated insights, and seamless Stripe integration. Focused on delivering enterprise features at SMB-friendly pricing.",
+      "Developed a React-based dashboard with Azure SignalR for real-time updates, integrated with .NET Core APIs and Azure Stream Analytics. Implemented Chart.js and D3.js for interactive visualizations with drill-down capabilities.",
     techStack: [
+      "React 18",
+      "TypeScript",
       ".NET Core",
-      "React",
-      "PostgreSQL",
-      "SignalR",
-      "Stripe",
-      "Chart.js",
+      "Azure SignalR",
+      "Azure Stream Analytics",
+      "Power BI Embedded",
     ],
     highlights: [
-      "Multi-tenant architecture with data isolation",
+      "1M+ events processed daily",
       "Real-time updates via SignalR",
-      "Stripe subscription management",
-      "Custom report builder with PDF export",
+      "Custom report builder with exports",
+      "AI-powered anomaly detection",
     ],
     role: "Full-Stack Developer",
     image: "",
     liveUrl: "",
-    githubUrl: "https://github.com/Vivekdude/saas-dashboard",
+    githubUrl: "",
   },
   {
-    id: "cloud-api-platform",
-    title: "Cloud-Native API Gateway",
+    id: "api-gateway-platform",
+    title: "Microservices API Gateway",
     category: "API & Integration",
     shortDescription:
-      "A centralized API platform managing 15+ microservices with advanced security, rate limiting, and comprehensive monitoring.",
+      "Designed and implemented a centralized API gateway managing 25+ microservices with advanced security, rate limiting, and comprehensive monitoring.",
     problem:
-      "Internal services needed a unified, secure gateway for external partner integrations while maintaining strict performance and security standards.",
+      "Multiple development teams were building independent services without standardized security, logging, or API management, leading to inconsistent client experiences and security vulnerabilities.",
     solution:
-      "Designed a robust API management layer using Azure APIM with custom policies, OAuth 2.0 security, intelligent rate limiting, and real-time analytics for partner consumption tracking.",
+      "Built a unified API layer using Azure API Management with custom policies for authentication, rate limiting, and request transformation. Implemented OAuth 2.0/OpenID Connect with Azure AD and comprehensive logging via Application Insights.",
     techStack: [
       "Azure APIM",
       "Azure Functions",
       ".NET Core",
-      "Azure Monitor",
-      "Key Vault",
       "OAuth 2.0",
+      "Azure Key Vault",
+      "Application Insights",
     ],
     highlights: [
-      "Gateway for 15+ microservices",
-      "Custom rate limiting & throttling",
-      "Zero-trust security with JWT validation",
-      "Real-time monitoring & alerting",
+      "25+ microservices unified",
+      "Zero-trust security model",
+      "99.95% gateway availability",
+      "Reduced API latency by 40%",
     ],
     role: "Cloud Architect",
     image: "",
@@ -152,59 +153,114 @@ export const projects = [
     githubUrl: "",
   },
   {
-    id: "legacy-migration",
-    title: "Legacy System Modernization",
-    category: "Migration & Modernization",
+    id: "angular-enterprise-portal",
+    title: "Enterprise Workflow Portal",
+    category: "Enterprise Application",
     shortDescription:
-      "Zero-downtime migration of a decade-old .NET Framework monolith to modern .NET 8 with cloud-native architecture.",
+      "Developed a comprehensive Angular-based enterprise portal with complex workflow automation, reducing manual processing by 70%.",
     problem:
-      "A critical business application built on .NET Framework was becoming unmaintainable, had accumulating security debt, and couldn't leverage modern cloud capabilities.",
+      "An organization's approval workflows were entirely manual, involving multiple departments with paper-based processes causing delays of 5-7 days for routine approvals.",
     solution:
-      "Led a strategic phased migration using the strangler fig pattern. Modernized to .NET 8 with Clean Architecture, containerized deployments, and full CI/CD automation — all while maintaining 100% business continuity.",
+      "Created a modular Angular 14 application with dynamic form generation, multi-level approval workflows, and Azure Logic Apps integration. Implemented role-based dashboards with real-time notifications via Azure Notification Hubs.",
     techStack: [
-      ".NET 8",
-      "Entity Framework Core",
-      "Azure App Service",
-      "Azure DevOps",
-      "Docker",
-      "Application Insights",
+      "Angular 14",
+      "TypeScript",
+      "RxJS",
+      "Azure Logic Apps",
+      ".NET Core API",
+      "SQL Server",
     ],
     highlights: [
-      "Zero-downtime 6-month migration",
-      "50% reduction in hosting costs",
-      "3x improvement in response times",
-      "95% test coverage achieved",
+      "70% faster approval cycles",
+      "Dynamic workflow engine",
+      "Automated email notifications",
+      "Audit trail & compliance reports",
     ],
-    role: "Technical Lead",
+    role: "Senior Developer",
     image: "",
     liveUrl: "",
     githubUrl: "",
   },
 ];
 
+export const experience = [
+  {
+    company: "Deloitte USI",
+    location: "Gurgaon",
+    role: "Senior Consultant",
+    period: "Aug 2021 – Present",
+    highlights: [
+      "Lead cross-functional teams of 5-8 developers on enterprise cloud projects",
+      "Architected microservices solutions on Azure serving 50K+ users",
+      "Reduced deployment time by 80% through CI/CD automation",
+      "Mentored junior developers and conducted technical interviews",
+    ],
+  },
+  {
+    company: "IBM India Pvt Ltd",
+    location: "Noida",
+    role: "Application Developer",
+    period: "Sep 2018 – Jun 2021",
+    highlights: [
+      "Built scalable REST APIs handling 100K+ daily requests",
+      "Migrated legacy systems to cloud-native architecture",
+      "Collaborated with global teams across 3 time zones",
+      "Received 'Excellence Award' for delivering critical projects ahead of schedule",
+    ],
+  },
+  {
+    company: "Ishir Technology",
+    location: "Noida",
+    role: "Software Developer",
+    period: "Dec 2017 – Sep 2018",
+    highlights: [
+      "Developed full-stack applications using .NET and Angular",
+      "Optimized database queries improving performance by 40%",
+      "Implemented responsive UI components for mobile-first design",
+    ],
+  },
+  {
+    company: "ACS Pvt. Ltd.",
+    location: "Indore",
+    role: "Software Engineer",
+    period: "Dec 2015 – Dec 2017",
+    highlights: [
+      "Built enterprise web applications from ground up",
+      "Gained expertise in .NET ecosystem and SQL Server",
+      "Delivered 10+ projects with 100% client satisfaction",
+    ],
+  },
+];
+
+export const certifications = [
+  "AZ-900: Microsoft Azure Fundamentals",
+  "AI-900: Microsoft Azure AI Fundamentals",
+  "DP-900: Microsoft Azure Data Fundamentals",
+];
+
 export const services = [
   {
     title: "Full-Stack Development",
     description:
-      "End-to-end web application development using .NET Core and React. From database design to deployment.",
+      "End-to-end web application development using .NET Core, React, and Angular. From database design to cloud deployment.",
     icon: "code",
-  },
-  {
-    title: "API Development",
-    description:
-      "Scalable REST APIs with clean architecture, proper documentation, and comprehensive testing.",
-    icon: "server",
   },
   {
     title: "Cloud Architecture",
     description:
-      "Azure-based solutions including Functions, APIM, Service Bus, and cost-optimized infrastructure.",
+      "Azure-based solutions including Functions, Logic Apps, APIM, Service Bus, and cost-optimized infrastructure.",
     icon: "cloud",
   },
   {
-    title: "Legacy Modernization",
+    title: "API Development",
     description:
-      "Migrate .NET Framework applications to modern .NET Core with cloud-native architecture.",
+      "Scalable RESTful APIs and microservices with proper documentation, testing, and CI/CD integration.",
+    icon: "server",
+  },
+  {
+    title: "Team Leadership",
+    description:
+      "Leading development teams, providing technical guidance, and ensuring successful project delivery using Agile methodologies.",
     icon: "refresh",
   },
 ];

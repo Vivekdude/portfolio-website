@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { personalInfo } from "@/data/portfolio-data";
 
 export default function Hero() {
@@ -31,15 +31,18 @@ export default function Hero() {
 
         {/* Main Headline */}
         <h1 className="mb-6 max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-          I Build{" "}
-          <span className="gradient-text">Scalable Cloud Solutions</span>{" "}
-          That Drive Business Growth
+          {personalInfo.tagline.split("&").map((part, i) =>
+            i === 0 ? (
+              <span key={i}>{part}<span className="gradient-text">&amp;</span></span>
+            ) : (
+              <span key={i} className="gradient-text">{part}</span>
+            )
+          )}
         </h1>
 
         {/* Subtitle */}
         <p className="mb-10 max-w-2xl text-lg text-slate-400 md:text-xl">
-          {personalInfo.title} with 10+ years of experience crafting
-          enterprise-grade applications, APIs, and cloud architectures for startups and Fortune 500 companies.
+          {personalInfo.subtitle}
         </p>
 
         {/* CTA Buttons */}
@@ -57,18 +60,18 @@ export default function Hero() {
         {/* Stats Row */}
         <div className="mb-12 flex flex-wrap items-center justify-center gap-8 md:gap-16">
           <div className="text-center">
-            <div className="text-3xl font-bold text-white md:text-4xl">10+</div>
+            <div className="text-3xl font-bold text-white md:text-4xl">9+</div>
             <div className="text-sm text-slate-500">Years Experience</div>
           </div>
           <div className="h-12 w-px bg-slate-800 hidden md:block"></div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white md:text-4xl">50+</div>
-            <div className="text-sm text-slate-500">Projects Delivered</div>
+            <div className="text-3xl font-bold text-white md:text-4xl">4</div>
+            <div className="text-sm text-slate-500">Companies</div>
           </div>
           <div className="h-12 w-px bg-slate-800 hidden md:block"></div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white md:text-4xl">99.9%</div>
-            <div className="text-sm text-slate-500">Uptime Achieved</div>
+            <div className="text-3xl font-bold text-white md:text-4xl">3</div>
+            <div className="text-sm text-slate-500">Azure Certifications</div>
           </div>
         </div>
 

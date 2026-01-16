@@ -84,22 +84,25 @@ export default function Skills() {
         {/* Additional Skills Bar */}
         <div className="mt-16 rounded-2xl border border-slate-800 bg-slate-900/50 p-8">
           <h3 className="mb-6 text-center text-lg font-semibold text-white">
-            Additional Tools & Technologies
+            Tools & Technologies I Use Daily
           </h3>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {[
               "Git",
               "Azure DevOps",
+              "Visual Studio",
+              "VS Code",
+              "Postman",
+              "Swagger/OpenAPI",
+              "Redis Cache",
+              "SignalR",
+              "Power BI",
               "Jira",
               "Confluence",
-              "Postman",
-              "Swagger",
-              "Redis",
-              "RabbitMQ",
-              "SignalR",
-              "GraphQL",
-              "Terraform",
-              "Kubernetes",
+              "Figma",
+              "Docker Desktop",
+              "Azure Portal",
+              "GitHub Actions",
             ].map((tool) => (
               <span
                 key={tool}

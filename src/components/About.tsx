@@ -1,11 +1,11 @@
-import { CheckCircle, Zap, Users, Award, TrendingUp } from "lucide-react";
-import { aboutMe, personalInfo } from "@/data/portfolio-data";
+import { CheckCircle, Zap, Users, Award, BadgeCheck } from "lucide-react";
+import { aboutMe, certifications } from "@/data/portfolio-data";
 
 const stats = [
-  { icon: Zap, value: "10+", label: "Years Experience", color: "text-blue-400" },
-  { icon: Users, value: "50+", label: "Projects Delivered", color: "text-violet-400" },
-  { icon: Award, value: "15+", label: "Enterprise Clients", color: "text-emerald-400" },
-  { icon: TrendingUp, value: "3x", label: "Avg. Performance Boost", color: "text-amber-400" },
+  { icon: Zap, value: "9+", label: "Years Experience", color: "text-blue-400" },
+  { icon: Users, value: "4", label: "Companies", color: "text-violet-400" },
+  { icon: Award, value: "3", label: "Azure Certifications", color: "text-emerald-400" },
+  { icon: BadgeCheck, value: "20+", label: "Projects Delivered", color: "text-amber-400" },
 ];
 
 export default function About() {
@@ -47,6 +47,22 @@ export default function About() {
                 </div>
               ))}
             </div>
+
+            {/* Certifications */}
+            <div className="mt-10">
+              <h3 className="mb-4 text-lg font-semibold text-white">Microsoft Azure Certifications</h3>
+              <div className="flex flex-wrap gap-3">
+                {certifications.map((cert, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-400"
+                  >
+                    <Award size={16} />
+                    {cert}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right Column - Stats (2 cols) */}
@@ -77,7 +93,7 @@ export default function About() {
             Technologies I Work With
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            {["Microsoft Azure", ".NET Core", "React", "TypeScript", "SQL Server", "Docker"].map(
+            {["Microsoft Azure", ".NET Core", "React.js", "Angular", "SQL Server", "Node.js"].map(
               (tech) => (
                 <div
                   key={tech}
