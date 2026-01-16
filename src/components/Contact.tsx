@@ -1,80 +1,94 @@
-import { Mail, Linkedin, Github, MapPin, Clock } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin, Clock, ArrowRight, CheckCircle } from "lucide-react";
 import { personalInfo } from "@/data/portfolio-data";
+
+const services = [
+  "Full-stack web application development",
+  "Cloud architecture & Azure solutions",
+  "API design and microservices",
+  "Legacy system modernization",
+  "Technical consulting & code reviews",
+];
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-padding bg-slate-900 text-white">
-      <div className="container-max">
-        <div className="grid gap-12 lg:grid-cols-2">
-          {/* Left Side - CTA */}
-          <div>
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              Let&apos;s Build Something Great Together
-            </h2>
-            <p className="mb-8 text-lg text-slate-300">
-              I&apos;m available for freelance projects, consulting, and
-              long-term collaborations. Whether you need a full application
-              built or help with a specific technical challenge, let&apos;s
-              talk.
-            </p>
+    <section id="contact" className="section-padding bg-slate-900 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute left-0 bottom-0 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl"></div>
+      <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-violet-600/10 blur-3xl"></div>
 
-            {/* Quick Info */}
-            <div className="mb-8 space-y-4">
-              <div className="flex items-center gap-3 text-slate-300">
-                <MapPin size={20} className="text-primary-400" />
-                <span>{personalInfo.location} (Remote Available)</span>
+      <div className="container-max relative">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-emerald-400">
+            Get In Touch
+          </span>
+          <h2 className="section-title mx-auto max-w-3xl">
+            Let&apos;s Build Something{" "}
+            <span className="gradient-text">Amazing Together</span>
+          </h2>
+          <p className="section-subtitle mx-auto mt-6">
+            Ready to transform your ideas into reality? I&apos;m available for freelance
+            projects, consulting, and long-term collaborations.
+          </p>
+        </div>
+
+        <div className="grid gap-12 lg:grid-cols-2">
+          {/* Left Side - Info */}
+          <div>
+            {/* Quick Info Cards */}
+            <div className="mb-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-6">
+                <MapPin className="mb-3 text-blue-400" size={24} />
+                <h3 className="mb-1 font-semibold text-white">Location</h3>
+                <p className="text-slate-400">{personalInfo.location}</p>
+                <p className="text-sm text-slate-500">Remote Available</p>
               </div>
-              <div className="flex items-center gap-3 text-slate-300">
-                <Clock size={20} className="text-primary-400" />
-                <span>Response within 24 hours</span>
+              <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-6">
+                <Clock className="mb-3 text-violet-400" size={24} />
+                <h3 className="mb-1 font-semibold text-white">Response Time</h3>
+                <p className="text-slate-400">Within 24 hours</p>
+                <p className="text-sm text-slate-500">Usually same day</p>
               </div>
             </div>
 
-            {/* What I Help With */}
-            <div className="rounded-lg bg-slate-800 p-6">
-              <h3 className="mb-4 font-semibold text-white">I can help with:</h3>
-              <ul className="space-y-2 text-slate-300">
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-400"></span>
-                  Building new web applications from scratch
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-400"></span>
-                  Adding features to existing .NET/React applications
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-400"></span>
-                  Migrating legacy systems to modern cloud architecture
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-400"></span>
-                  API design and integration work
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-400"></span>
-                  Code review and architecture consulting
-                </li>
+            {/* Services List */}
+            <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-6">
+              <h3 className="mb-6 text-lg font-semibold text-white">How I Can Help</h3>
+              <ul className="space-y-4">
+                {services.map((service, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 flex-shrink-0 text-emerald-400" size={18} />
+                    <span className="text-slate-300">{service}</span>
+                  </li>
+                ))}
               </ul>
+            </div>
+
+            {/* Trust Signal */}
+            <div className="mt-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-4 text-center">
+              <p className="text-sm text-emerald-400">
+                Trusted by 15+ companies globally | NDA-friendly | Flexible engagement models
+              </p>
             </div>
           </div>
 
           {/* Right Side - Contact Methods */}
           <div className="flex flex-col justify-center">
-            <div className="space-y-6">
-              {/* Email - Primary */}
+            <div className="space-y-4">
+              {/* Email - Primary CTA */}
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="group flex items-center gap-4 rounded-xl bg-slate-800 p-6 transition-all hover:bg-slate-700"
+                className="group flex items-center gap-5 rounded-2xl border border-slate-800 bg-slate-950/50 p-6 transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-900"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-600 text-white">
-                  <Mail size={24} />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-violet-500 text-white shadow-lg shadow-blue-500/20">
+                  <Mail size={26} />
                 </div>
-                <div>
+                <div className="flex-1">
                   <div className="font-semibold text-white">Email Me</div>
                   <div className="text-slate-400">{personalInfo.email}</div>
                 </div>
-                <div className="ml-auto text-slate-500 transition-transform group-hover:translate-x-1">
-                  &rarr;
+                <div className="text-slate-600 transition-all group-hover:translate-x-1 group-hover:text-blue-400">
+                  <ArrowRight size={20} />
                 </div>
               </a>
 
@@ -83,19 +97,17 @@ export default function Contact() {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-xl bg-slate-800 p-6 transition-all hover:bg-slate-700"
+                className="group flex items-center gap-5 rounded-2xl border border-slate-800 bg-slate-950/50 p-6 transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-900"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#0077B5] text-white">
-                  <Linkedin size={24} />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#0077B5] text-white shadow-lg shadow-blue-500/20">
+                  <Linkedin size={26} />
                 </div>
-                <div>
-                  <div className="font-semibold text-white">
-                    Connect on LinkedIn
-                  </div>
+                <div className="flex-1">
+                  <div className="font-semibold text-white">Connect on LinkedIn</div>
                   <div className="text-slate-400">Let&apos;s connect professionally</div>
                 </div>
-                <div className="ml-auto text-slate-500 transition-transform group-hover:translate-x-1">
-                  &rarr;
+                <div className="text-slate-600 transition-all group-hover:translate-x-1 group-hover:text-blue-400">
+                  <ArrowRight size={20} />
                 </div>
               </a>
 
@@ -104,27 +116,30 @@ export default function Contact() {
                 href={personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-xl bg-slate-800 p-6 transition-all hover:bg-slate-700"
+                className="group flex items-center gap-5 rounded-2xl border border-slate-800 bg-slate-950/50 p-6 transition-all duration-300 hover:border-slate-600 hover:bg-slate-900"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-600 text-white">
-                  <Github size={24} />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-slate-700 text-white shadow-lg">
+                  <Github size={26} />
                 </div>
-                <div>
+                <div className="flex-1">
                   <div className="font-semibold text-white">View My Code</div>
-                  <div className="text-slate-400">Check out my GitHub repositories</div>
+                  <div className="text-slate-400">Check out my repositories</div>
                 </div>
-                <div className="ml-auto text-slate-500 transition-transform group-hover:translate-x-1">
-                  &rarr;
+                <div className="text-slate-600 transition-all group-hover:translate-x-1 group-hover:text-white">
+                  <ArrowRight size={20} />
                 </div>
               </a>
             </div>
 
-            {/* Trust Signals */}
-            <div className="mt-8 rounded-lg border border-slate-700 p-4 text-center">
-              <p className="text-sm text-slate-400">
-                Trusted by companies globally | NDA-friendly | Flexible
-                engagement models
-              </p>
+            {/* CTA Button */}
+            <div className="mt-8 text-center">
+              <a
+                href={`mailto:${personalInfo.email}?subject=Project Inquiry`}
+                className="btn-primary w-full sm:w-auto"
+              >
+                Start a Conversation
+                <ArrowRight size={20} />
+              </a>
             </div>
           </div>
         </div>

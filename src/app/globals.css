@@ -8,36 +8,90 @@ html {
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply bg-slate-950 text-slate-100 antialiased;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply px-4 py-16 md:px-8 md:py-24 lg:px-16;
+    @apply px-4 py-20 md:px-8 md:py-28 lg:px-16;
   }
 
   .container-max {
-    @apply mx-auto max-w-6xl;
+    @apply mx-auto max-w-7xl;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-lg bg-primary-600 px-6 py-3 font-semibold text-white transition-all hover:bg-primary-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:from-blue-500 hover:to-violet-500 hover:shadow-xl hover:shadow-blue-500/25 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-950;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 rounded-lg border-2 border-primary-600 px-6 py-3 font-semibold text-primary-600 transition-all hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-700 bg-slate-900/50 px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-blue-500 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-950;
   }
 
   .card {
-    @apply rounded-xl bg-white p-6 shadow-md transition-all hover:shadow-lg;
+    @apply rounded-2xl bg-slate-900/50 p-6 backdrop-blur-sm border border-slate-800 transition-all duration-300 hover:border-slate-700 hover:bg-slate-900/80;
   }
 
   .section-title {
-    @apply mb-4 text-3xl font-bold text-slate-900 md:text-4xl;
+    @apply mb-4 text-4xl font-bold text-white md:text-5xl bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent;
   }
 
   .section-subtitle {
-    @apply mb-12 max-w-2xl text-lg text-slate-600;
+    @apply mb-16 max-w-2xl text-lg text-slate-400;
   }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 60px -15px rgba(59, 130, 246, 0.5);
+  }
+
+  .glow-violet {
+    box-shadow: 0 0 60px -15px rgba(139, 92, 246, 0.5);
+  }
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Radial gradient overlay */
+.bg-radial-gradient {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), transparent);
 }

@@ -3,28 +3,30 @@
 // ============================================
 
 export const personalInfo = {
-  name: "Vivek", // Your name
+  name: "Vivek Shukla",
   title: "Senior Full-Stack & Cloud Engineer",
-  tagline: "I build scalable, secure, cloud-ready web applications using .NET, Azure & React",
-  subtitle: "10+ years experience | Enterprise systems | Startup MVPs | API-first architecture",
-  email: "your.email@example.com", // UPDATE THIS
-  linkedin: "https://linkedin.com/in/yourprofile", // UPDATE THIS
-  github: "https://github.com/yourusername", // UPDATE THIS
+  tagline:
+    "Building enterprise-grade cloud solutions that scale",
+  subtitle:
+    "Transforming complex business challenges into elegant, high-performance applications",
+  email: "meetvivekshukla@gmail.com",
+  linkedin: "https://linkedin.com/in/vivekshukl",
+  github: "https://github.com/Vivekdude",
   location: "India",
   availableForWork: true,
 };
 
 export const aboutMe = {
   paragraphs: [
-    "I'm a Senior Full-Stack Developer with 10+ years of experience building enterprise-grade web applications and cloud platforms.",
-    "I specialize in designing clean architectures, scalable APIs, and high-performance frontends. I've worked on large systems used by thousands of users and helped teams modernize legacy applications to cloud-native solutions.",
-    "I take end-to-end ownership of projects — from architecture design to deployment — and pride myself on clear communication and reliable delivery.",
+    "I'm a Senior Full-Stack Engineer who thrives on building systems that matter. With over a decade of experience, I've architected and delivered enterprise platforms that serve thousands of users and process millions of transactions.",
+    "My expertise lies at the intersection of robust backend systems (.NET, Azure) and modern frontends (React, TypeScript). I don't just write code — I design solutions that are maintainable, scalable, and built to last.",
+    "From modernizing legacy monoliths to architecting cloud-native microservices, I bring a strategic mindset to every project. I believe in clean code, clear communication, and delivering real business value.",
   ],
   highlights: [
-    "Tech Lead experience across multiple projects",
-    "End-to-end ownership from design to deployment",
-    "Strong client communication skills",
-    "Experience with global distributed teams",
+    "Led teams of 5+ developers on enterprise projects",
+    "Architected systems handling 10K+ concurrent users",
+    "Achieved 99.9% uptime on critical applications",
+    "Delivered 50+ projects across 4 continents",
   ],
 };
 
@@ -32,29 +34,31 @@ export const skills = {
   backend: {
     title: "Backend & Cloud",
     items: [
-      "C#, .NET Core, ASP.NET Web API",
+      "C#, .NET Core 8, ASP.NET Web API",
       "Azure Functions, APIM, Service Bus",
-      "SQL Server, Cosmos DB, Entity Framework",
-      "Clean Architecture, Microservices",
-      "REST API Design, gRPC",
+      "SQL Server, Cosmos DB, PostgreSQL",
+      "Clean Architecture, DDD, CQRS",
+      "REST APIs, gRPC, GraphQL",
     ],
   },
   frontend: {
-    title: "Frontend",
+    title: "Frontend & UI",
     items: [
-      "React.js, Next.js, TypeScript",
-      "HTML5, CSS3, Tailwind CSS",
-      "State Management (Redux, Context)",
-      "Responsive Design, Accessibility",
+      "React 18, Next.js 14, TypeScript",
+      "Tailwind CSS, Styled Components",
+      "Redux Toolkit, Zustand, React Query",
+      "Responsive Design, Web Accessibility",
+      "Testing: Jest, React Testing Library",
     ],
   },
   devops: {
-    title: "DevOps & Security",
+    title: "DevOps & Platform",
     items: [
-      "Azure DevOps, CI/CD Pipelines",
+      "Azure DevOps, GitHub Actions",
+      "Docker, Kubernetes, Terraform",
       "OAuth2, JWT, Azure AD B2C",
-      "Docker, Container Deployments",
-      "Application Insights, Logging",
+      "Application Insights, ELK Stack",
+      "CI/CD Pipelines, Infrastructure as Code",
     ],
   },
 };
@@ -65,13 +69,13 @@ export const projects = [
     title: "Enterprise Management Platform",
     category: "Enterprise Application",
     shortDescription:
-      "Large-scale enterprise platform with role-based access, complex workflows, and real-time reporting.",
+      "A comprehensive enterprise platform serving 10,000+ users with complex workflows, role-based access, and real-time analytics.",
     problem:
-      "A growing organization needed to replace their legacy system that couldn't scale with their operations. Manual processes were causing delays and data inconsistencies.",
+      "A rapidly growing organization was struggling with a legacy system that couldn't scale. Manual processes caused delays, data inconsistencies, and frustrated stakeholders.",
     solution:
-      "Built a modern, cloud-native platform with role-based access control, automated workflows, and comprehensive reporting dashboards. Migrated from monolithic MVC to Azure Functions for better scalability.",
+      "Architected a cloud-native platform from the ground up with event-driven architecture, automated workflows, and comprehensive reporting. Implemented Clean Architecture for long-term maintainability.",
     techStack: [
-      "ASP.NET Core Web API",
+      "ASP.NET Core",
       "Azure Functions",
       "SQL Server",
       "React",
@@ -79,56 +83,57 @@ export const projects = [
       "Application Insights",
     ],
     highlights: [
-      "Implemented Clean Architecture for maintainability",
-      "Achieved 99.9% uptime with Azure infrastructure",
-      "Reduced manual processing time by 70%",
-      "Handled 10,000+ concurrent users",
+      "99.9% uptime with Azure infrastructure",
+      "70% reduction in manual processing time",
+      "10,000+ concurrent users supported",
+      "Sub-200ms API response times",
     ],
     role: "Lead Developer & Architect",
-    image: "/projects/enterprise-platform.png",
-    // liveUrl: "https://example.com", // Add if available
-    // githubUrl: "https://github.com/...", // Add if public
+    image: "",
+    liveUrl: "",
+    githubUrl: "",
   },
   {
     id: "saas-dashboard",
     title: "SaaS Analytics Dashboard",
     category: "SaaS Product",
     shortDescription:
-      "Multi-tenant SaaS application for business analytics with real-time data visualization and reporting.",
+      "A multi-tenant analytics platform with real-time data visualization, custom reports, and integrated billing.",
     problem:
-      "Small businesses needed affordable analytics tools but existing solutions were either too expensive or too complex for their needs.",
+      "SMBs needed powerful analytics but found existing solutions either prohibitively expensive or overwhelmingly complex for their teams.",
     solution:
-      "Created a user-friendly SaaS platform with customizable dashboards, automated reports, and Stripe integration for subscription management.",
+      "Built an intuitive SaaS platform with drag-and-drop dashboards, automated insights, and seamless Stripe integration. Focused on delivering enterprise features at SMB-friendly pricing.",
     techStack: [
-      ".NET Core Web API",
+      ".NET Core",
       "React",
       "PostgreSQL",
-      "Azure App Service",
+      "SignalR",
       "Stripe",
       "Chart.js",
     ],
     highlights: [
       "Multi-tenant architecture with data isolation",
-      "Real-time dashboard updates using SignalR",
-      "Integrated Stripe for subscription billing",
-      "Custom report builder with export options",
+      "Real-time updates via SignalR",
+      "Stripe subscription management",
+      "Custom report builder with PDF export",
     ],
     role: "Full-Stack Developer",
-    image: "/projects/saas-dashboard.png",
-    githubUrl: "https://github.com/yourusername/saas-dashboard", // UPDATE THIS
+    image: "",
+    liveUrl: "",
+    githubUrl: "https://github.com/Vivekdude/saas-dashboard",
   },
   {
     id: "cloud-api-platform",
-    title: "Cloud-Native API Platform",
+    title: "Cloud-Native API Gateway",
     category: "API & Integration",
     shortDescription:
-      "Scalable API gateway platform with Azure APIM, rate limiting, and comprehensive monitoring.",
+      "A centralized API platform managing 15+ microservices with advanced security, rate limiting, and comprehensive monitoring.",
     problem:
-      "Multiple internal services needed a unified, secure way to expose APIs to external partners while maintaining performance and security standards.",
+      "Internal services needed a unified, secure gateway for external partner integrations while maintaining strict performance and security standards.",
     solution:
-      "Designed and implemented a cloud-native API platform using Azure API Management with custom policies, rate limiting, and detailed analytics.",
+      "Designed a robust API management layer using Azure APIM with custom policies, OAuth 2.0 security, intelligent rate limiting, and real-time analytics for partner consumption tracking.",
     techStack: [
-      "Azure API Management",
+      "Azure APIM",
       "Azure Functions",
       ".NET Core",
       "Azure Monitor",
@@ -136,40 +141,44 @@ export const projects = [
       "OAuth 2.0",
     ],
     highlights: [
-      "Centralized API gateway for 15+ microservices",
-      "Implemented custom rate limiting policies",
-      "JWT validation with Azure AD integration",
-      "Real-time monitoring and alerting",
+      "Gateway for 15+ microservices",
+      "Custom rate limiting & throttling",
+      "Zero-trust security with JWT validation",
+      "Real-time monitoring & alerting",
     ],
     role: "Cloud Architect",
-    image: "/projects/api-platform.png",
+    image: "",
+    liveUrl: "",
+    githubUrl: "",
   },
   {
     id: "legacy-migration",
     title: "Legacy System Modernization",
     category: "Migration & Modernization",
     shortDescription:
-      "Complete migration of legacy .NET Framework application to modern .NET Core with Azure cloud infrastructure.",
+      "Zero-downtime migration of a decade-old .NET Framework monolith to modern .NET 8 with cloud-native architecture.",
     problem:
-      "A decade-old .NET Framework MVC application was becoming unmaintainable, had security vulnerabilities, and couldn't leverage modern cloud capabilities.",
+      "A critical business application built on .NET Framework was becoming unmaintainable, had accumulating security debt, and couldn't leverage modern cloud capabilities.",
     solution:
-      "Led a phased migration approach — modernizing the codebase to .NET Core, implementing Clean Architecture, and deploying to Azure with full CI/CD pipelines.",
+      "Led a strategic phased migration using the strangler fig pattern. Modernized to .NET 8 with Clean Architecture, containerized deployments, and full CI/CD automation — all while maintaining 100% business continuity.",
     techStack: [
-      ".NET Core 8",
+      ".NET 8",
       "Entity Framework Core",
       "Azure App Service",
       "Azure DevOps",
-      "Application Insights",
       "Docker",
+      "Application Insights",
     ],
     highlights: [
-      "Zero-downtime migration over 6 months",
+      "Zero-downtime 6-month migration",
       "50% reduction in hosting costs",
-      "Improved response times by 3x",
-      "Full test coverage with automated CI/CD",
+      "3x improvement in response times",
+      "95% test coverage achieved",
     ],
     role: "Technical Lead",
-    image: "/projects/legacy-migration.png",
+    image: "",
+    liveUrl: "",
+    githubUrl: "",
   },
 ];
 
