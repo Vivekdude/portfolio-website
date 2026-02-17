@@ -1,5 +1,6 @@
-import { CheckCircle, Zap, Users, Award, BadgeCheck } from "lucide-react";
-import { aboutMe, certifications } from "@/data/portfolio-data";
+import { CheckCircle, Zap, Users, Award, BadgeCheck, GraduationCap } from "lucide-react";
+import { aboutMe, certifications, education } from "@/data/portfolio-data";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const stats = [
   { icon: Zap, value: "9+", label: "Years Experience", color: "text-blue-400" },
@@ -16,57 +17,89 @@ export default function About() {
 
       <div className="container-max relative">
         {/* Section Header */}
-        <div className="mb-16 max-w-3xl">
-          <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-blue-400">
-            About Me
-          </span>
-          <h2 className="section-title">
-            Turning Complex Problems Into{" "}
-            <span className="gradient-text">Elegant Solutions</span>
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="mb-16 max-w-3xl">
+            <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-blue-400">
+              About Me
+            </span>
+            <h2 className="section-title">
+              Turning Complex Problems Into{" "}
+              <span className="gradient-text">Elegant Solutions</span>
+            </h2>
+          </div>
+        </ScrollReveal>
 
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           {/* Left Column - Text (3 cols) */}
           <div className="lg:col-span-3">
-            <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
-              {aboutMe.paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
+            <ScrollReveal>
+              <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
+                {aboutMe.paragraphs.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            </ScrollReveal>
 
             {/* Highlights Grid */}
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {aboutMe.highlights.map((highlight, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-3 rounded-xl border border-slate-800 bg-slate-900/30 p-4 transition-colors hover:border-slate-700"
-                >
-                  <CheckCircle className="mt-0.5 flex-shrink-0 text-emerald-400" size={20} />
-                  <span className="text-slate-300">{highlight}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Certifications */}
-            <div className="mt-10">
-              <h3 className="mb-4 text-lg font-semibold text-white">Microsoft Azure Certifications</h3>
-              <div className="flex flex-wrap gap-3">
-                {certifications.map((cert, index) => (
+            <ScrollReveal delay={1}>
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                {aboutMe.highlights.map((highlight, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-400"
+                    className="flex items-start gap-3 rounded-xl border border-slate-800 bg-slate-900/30 p-4 transition-colors hover:border-slate-700"
                   >
-                    <Award size={16} />
-                    {cert}
+                    <CheckCircle className="mt-0.5 flex-shrink-0 text-emerald-400" size={20} />
+                    <span className="text-slate-300">{highlight}</span>
                   </div>
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
+
+            {/* Certifications */}
+            <ScrollReveal delay={2}>
+              <div className="mt-10">
+                <h3 className="mb-4 text-lg font-semibold text-white">Microsoft Azure Certifications</h3>
+                <div className="flex flex-wrap gap-3">
+                  {certifications.map((cert, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-400"
+                    >
+                      <Award size={16} />
+                      {cert}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Education */}
+            <ScrollReveal delay={3}>
+              <div className="mt-10">
+                <h3 className="mb-4 text-lg font-semibold text-white">Education</h3>
+                <div className="space-y-3">
+                  {education.map((edu, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-4 rounded-xl border border-slate-800 bg-slate-900/30 p-4"
+                    >
+                      <div className="mt-0.5 flex-shrink-0 rounded-lg bg-violet-500/10 p-2 text-violet-400">
+                        <GraduationCap size={20} />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-slate-200">{edu.degree}</p>
+                        <p className="text-sm text-slate-400">{edu.institution} · {edu.location}</p>
+                        <p className="text-sm text-slate-500">Graduated {edu.year}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Right Column - Stats (2 cols) */}
-          <div className="lg:col-span-2">
+          <ScrollReveal delay={1} className="lg:col-span-2">
             <div className="sticky top-24 grid grid-cols-2 gap-4">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
@@ -84,7 +117,7 @@ export default function About() {
                 );
               })}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Tech Brands / Trust Signals */}

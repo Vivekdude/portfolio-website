@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import { personalInfo } from "@/data/portfolio-data";
 
 export default function Hero() {
@@ -55,6 +55,14 @@ export default function Hero() {
             <Mail size={20} />
             Let&apos;s Talk
           </a>
+          <a
+            href={personalInfo.resumeUrl}
+            download
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-700 bg-slate-900/50 px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-emerald-500/60 hover:bg-emerald-500/10 hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950"
+          >
+            <Download size={20} />
+            Resume
+          </a>
         </div>
 
         {/* Stats Row */}
@@ -65,8 +73,8 @@ export default function Hero() {
           </div>
           <div className="h-12 w-px bg-slate-800 hidden md:block"></div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white md:text-4xl">4</div>
-            <div className="text-sm text-slate-500">Companies</div>
+            <div className="text-3xl font-bold text-white md:text-4xl">20+</div>
+            <div className="text-sm text-slate-500">Projects Delivered</div>
           </div>
           <div className="h-12 w-px bg-slate-800 hidden md:block"></div>
           <div className="text-center">

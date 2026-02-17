@@ -10,11 +10,13 @@ export const personalInfo = {
   subtitle:
     "9+ years building robust web applications with .NET, Azure, React & Angular",
   email: "vivek1993.cs@gmail.com",
-  linkedin: "https://in.linkedin.com/in/vivekshukl",
+  linkedin: "https://in.linkedin.com/in/vivekshukla",
   github: "https://github.com/vivekdude",
   phone: "+91-8318892165",
   location: "Gurgaon, India",
   availableForWork: true,
+  // Add your hosted resume PDF URL here (e.g. Google Drive share link or /resume.pdf in /public)
+  resumeUrl: "/resume.pdf",
 };
 
 export const aboutMe = {
@@ -31,35 +33,37 @@ export const aboutMe = {
   ],
 };
 
+export type Proficiency = "Expert" | "Proficient" | "Familiar";
+
 export const skills = {
   backend: {
     title: "Backend & Cloud",
     items: [
-      ".NET 8, .NET Core, ASP.NET Web API",
-      "Azure Functions, Logic Apps, APIM",
-      "Microservices, Event-Driven Architecture",
-      "Azure Service Bus, Cosmos DB, Key Vault",
-      "Entity Framework Core, LINQ, Node.js",
+      { label: ".NET 8, .NET Core, ASP.NET Web API", level: "Expert" as Proficiency },
+      { label: "Azure Functions, Logic Apps, APIM", level: "Expert" as Proficiency },
+      { label: "Microservices, Event-Driven Architecture", level: "Expert" as Proficiency },
+      { label: "Azure Service Bus, Cosmos DB, Key Vault", level: "Proficient" as Proficiency },
+      { label: "Entity Framework Core, LINQ, Node.js", level: "Expert" as Proficiency },
     ],
   },
   frontend: {
     title: "Frontend & UI",
     items: [
-      "React 18, Redux Toolkit, React Query",
-      "Angular 14+, RxJS, NgRx",
-      "TypeScript, JavaScript (ES6+)",
-      "Tailwind CSS, Material UI, Chart.js",
-      "Responsive Design, PWA, Web Accessibility",
+      { label: "React 18, Redux Toolkit, React Query", level: "Expert" as Proficiency },
+      { label: "Angular 14+, RxJS, NgRx", level: "Expert" as Proficiency },
+      { label: "TypeScript, JavaScript (ES6+)", level: "Expert" as Proficiency },
+      { label: "Tailwind CSS, Material UI, Chart.js", level: "Proficient" as Proficiency },
+      { label: "Responsive Design, PWA, Web Accessibility", level: "Proficient" as Proficiency },
     ],
   },
   devops: {
     title: "DevOps & Database",
     items: [
-      "Azure DevOps, CI/CD Pipelines, YAML",
-      "SQL Server, Cosmos DB, Redis Cache",
-      "Docker, Kubernetes, Container Apps",
-      "OAuth 2.0, Azure AD B2C, JWT",
-      "Application Insights, Log Analytics",
+      { label: "Azure DevOps, CI/CD Pipelines, YAML", level: "Expert" as Proficiency },
+      { label: "SQL Server, Cosmos DB, Redis Cache", level: "Proficient" as Proficiency },
+      { label: "Docker, Kubernetes, Container Apps", level: "Proficient" as Proficiency },
+      { label: "OAuth 2.0, Azure AD B2C, JWT", level: "Expert" as Proficiency },
+      { label: "Application Insights, Log Analytics", level: "Proficient" as Proficiency },
     ],
   },
 };
@@ -238,29 +242,20 @@ export const certifications = [
   "DP-900: Microsoft Azure Data Fundamentals",
 ];
 
-export const services = [
+// Update with your actual education details
+export const education = [
   {
-    title: "Full-Stack Development",
-    description:
-      "End-to-end web application development using .NET Core, React, and Angular. From database design to cloud deployment.",
-    icon: "code",
+    degree: "Bachelor of Technology — Computer Science & Engineering",
+    institution: "Your University Name",
+    location: "City, India",
+    year: "2015",
   },
-  {
-    title: "Cloud Architecture",
-    description:
-      "Azure-based solutions including Functions, Logic Apps, APIM, Service Bus, and cost-optimized infrastructure.",
-    icon: "cloud",
-  },
-  {
-    title: "API Development",
-    description:
-      "Scalable RESTful APIs and microservices with proper documentation, testing, and CI/CD integration.",
-    icon: "server",
-  },
-  {
-    title: "Team Leadership",
-    description:
-      "Leading development teams, providing technical guidance, and ensuring successful project delivery using Agile methodologies.",
-    icon: "refresh",
-  },
+];
+
+export const contactServices = [
+  "Full-stack web application development",
+  "Cloud architecture & Azure solutions",
+  "API design and microservices",
+  "Legacy system modernization",
+  "Technical consulting & code reviews",
 ];
